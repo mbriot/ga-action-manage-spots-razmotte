@@ -1,0 +1,21 @@
+name: Hello, World!
+description: Greet someone and record the time
+author: GitHub Actions
+
+# Define your inputs here.
+inputs:
+  issueBody:
+    description: body of issue
+    required: true
+    default: 
+
+# Define your outputs here.
+outputs:
+  spotName:
+    description: random spot name
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    INPUT_ISSUE_BODY: ${{ inputs.issueBody }}
