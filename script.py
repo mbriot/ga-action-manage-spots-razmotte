@@ -11,7 +11,7 @@ def exitError(reason):
 
 def readSpots(repoPath):
     try:
-        with open(f"{repoPath}/src/spots.json", 'r') as file:
+        with open(f"{repoPath}/spots.json", 'r') as file:
             spots = json.load(file)
     except FileNotFoundError:
         print(f"file {file} not found.")
@@ -159,7 +159,7 @@ def run():
         spots = updateSpots(spots,spot)
 
     try:
-        with open(f"{repoPath}/src/spots.json", 'w') as file:
+        with open(f"{repoPath}/spots.json", 'w') as file:
             json.dump(spots, file, indent=2)
     except FileNotFoundError:
         exitError(f"file {file} not found.")

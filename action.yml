@@ -1,18 +1,12 @@
-name: Hello, World!
-description: Greet someone and record the time
-author: GitHub Actions
+name: Manage Spots
+description: Add, update, delete spot on razmote-meteo
+author: mbriot
 
-# Define your inputs here.
 inputs:
   issueBody:
     description: body of issue
     required: true
     default: 
-
-# Define your outputs here.
-outputs:
-  spotName:
-    description: random spot name
 
 runs:
   using: docker
